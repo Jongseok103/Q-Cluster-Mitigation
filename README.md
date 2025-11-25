@@ -11,18 +11,18 @@ This repository contains a Python implementation of the **Q-Cluster** algorithm,
 > **"Q-Cluster: Quantum Error Mitigation Through Noise-Aware Unsupervised Learning"** > *Hrushikesh Pramod Patil, Dror Baron, and Huiyang Zhou (NC State University)* > arXiv preprint arXiv:2504.10801 (2025).
 
 ## 📖 Overview
-[cite_start]Quantum error mitigation (QEM) is critical in reducing the impact of noise in the pre-fault-tolerant era[cite: 10]. [cite_start]This project implements **Q-Cluster**, a novel QEM approach that reshapes the measured bit-string distribution using unsupervised learning (clustering)[cite: 11].
+Quantum error mitigation (QEM) is critical in reducing the impact of noise in the pre-fault-tolerant era. This project implements **Q-Cluster**, a novel QEM approach that reshapes the measured bit-string distribution using unsupervised learning (clustering).
 
 Based on the paper's methodology, this implementation focuses on:
-1.  [cite_start]**Clustering**: Grouping noisy measurement results (bit-strings) based on **Hamming distance** to identify dominant structures[cite: 12].
-2.  [cite_start]**Centroid Calculation**: Using **Qubit-wise Majority Vote (QMV)** to determine the noise-free centroid of each cluster[cite: 13].
-3.  [cite_start]**Distribution Reshaping**: Adjusting the noisy distribution using Bayesian inference and bit-flip error rates to reverse noise effects[cite: 14].
+1.  **Clustering**: Grouping noisy measurement results (bit-strings) based on **Hamming distance** to identify dominant structures.
+2.  **Centroid Calculation**: Using **Qubit-wise Majority Vote (QMV)** to determine the noise-free centroid of each cluster.
+3.  **Distribution Reshaping**: Adjusting the noisy distribution using Bayesian inference and bit-flip error rates to reverse noise effects.
 
 ## 🚀 Key Features
 - **Custom Noise Modeling**: Simulates realistic quantum noise, specifically focusing on asymmetric readout errors as described in the study.
 - **Q-Cluster Algorithm Implementation**:
-  - [cite_start]Implements the iterative clustering approach to discover $K$ dominant bit-strings[cite: 173].
-  - [cite_start]Filters outliers based on variance thresholds derived from the bit-flip noise model[cite: 142].
+  - Implements the iterative clustering approach to discover $K$ dominant bit-strings.
+  - Filters outliers based on variance thresholds derived from the bit-flip noise model.
 - **Visualization**:
   - Comparative histograms (Ideal vs. Noisy vs. Mitigated).
   - 2D PCA visualization of bitstring clusters in the latent space.
@@ -71,7 +71,7 @@ jupyter notebook demo.ipynb
 
 ## 📊 Methodology Summary
 
-[cite\_start]According to the research [cite: 12-14, 40-47], the Q-Cluster workflow implemented here follows these steps:
+According to the research, the Q-Cluster workflow implemented here follows these steps:
 
 1.  **Assumption**: Erroneous bit-strings tend to "cluster" around ideal ones in Hamming space under a bit-flip noise model.
 2.  **Clustering**: The algorithm identifies clusters using K-Means with Hamming distance.
