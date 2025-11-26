@@ -5,7 +5,7 @@ from qiskit.visualization import plot_histogram
 
 def plot_mitigation_result(counts_ideal, counts_noisy, counts_mitigated):
     """
-    Ideal, Noisy, Mitigated 결과를 히스토그램으로 비교 시각화합니다.
+    Ideal, Noisy, Mitigated 결과를 히스토그램으로 비교 시각화.
     """
     legend = ['Ideal (No Noise)', 'Noisy', 'Q-Cluster Mitigated']
     fig = plot_histogram([counts_ideal, counts_noisy, counts_mitigated], 
@@ -17,7 +17,7 @@ def plot_mitigation_result(counts_ideal, counts_noisy, counts_mitigated):
 
 def plot_pca_clusters(bitstrings, centroids, counts, n_qubits):
     """
-    비트열 데이터를 PCA로 차원 축소하여 클러스터링 결과를 시각화합니다.
+    비트열 데이터를 PCA로 차원 축소하여 클러스터링 결과를 시각화.
     """
     # 데이터 전처리
     def bitstring_to_vector(bitstring_list):

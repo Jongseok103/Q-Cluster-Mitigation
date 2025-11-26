@@ -3,11 +3,11 @@ from qiskit_aer.noise import NoiseModel, depolarizing_error, ReadoutError
 
 def build_custom_noise_model(p_depol=0.01, p_readout=0.05):
     """
-    사용자 정의 노이즈 모델을 생성합니다.
+    사용자 정의 노이즈 모델을 생성.
     
     Args:
-        p_depol (float): 게이트 탈분극 에러 확률
-        p_readout (float): 측정 에러 확률 (Readout Error)
+        p_depol (float): 게이트 탈분극 에러 확률 (Depolarizing Error) -> 0.0 ~ 1.0 사이 값
+        p_readout (float): 측정 에러 확률 (Readout Error) -> 0.0 ~ 1.0 사이 값
         
     Returns:
         NoiseModel: 생성된 Qiskit NoiseModel 객체
