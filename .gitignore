@@ -1,0 +1,24 @@
+# 1. 보안 파일 (가장 중요!)
+apikey.json
+secrets.json
+*.key
+.env
+
+# 2. Python 필수 제외 항목
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 3. 가상환경 폴더 (venv 등을 쓴다면)
+venv/
+env/
+.venv/
+
+# 4. IDE 설정 파일 (굳이 공유할 필요 없는 개인 설정)
+.vscode/
+.idea/
+*.swp
+
+# 5. OS 생성 파일
+.DS_Store
+Thumbs.db
